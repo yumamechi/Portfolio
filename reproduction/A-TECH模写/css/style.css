@@ -37,6 +37,24 @@ img {
   display: none;
 }
 
+.logo {
+  display: none;
+}
+
+.header__btn.active span:nth-of-type(1) {
+  top: 6px;
+  left: 8px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 80%;
+}
+
+.header__btn.active span:nth-of-type(2) {
+  top: 17px;
+  left: 9px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 80%;
+}
+
 .wrap {
   padding: 4em 1em;
   margin: 0 auto;
@@ -368,13 +386,22 @@ span {
   border-bottom-left-radius: 20px;
 }
 
-.header__btn .pc__only::before {
+.header__btn__contact::before {
   content: "無料";
-  background: #fff;
-  color: #333;
   padding: 0.7em;
   margin: 0 0.5em 0 0;
   border-radius: 1em;
+}
+
+.back__color-white::before {
+  background: #fff;
+  color: #224277;
+
+}
+
+.back__color-blue::before {
+  background: #224277;
+  color: #fff;
 }
 
 /* ------------------ */
@@ -774,7 +801,6 @@ span {
   border-radius: 50%;
   display: grid;
   align-items: center;
-  position: absolute;
   transform: translateX(-50%);
   font-weight: bold;
   top: -30px;
@@ -1191,6 +1217,7 @@ input[type="submit"] {
     right: 0;
     background: #fff;
     border-radius: 10px;
+    transition: all .4s;
   }
 
   .hamburger__bar:nth-child(1) {
@@ -1202,6 +1229,51 @@ input[type="submit"] {
     top: 60%;
     transform: translateY(-50%);
     width: 70%;
+  }
+
+  .gnav-list.sp__only .header__btn__contact {
+    background: #fff;
+    padding: 1em 3em;
+    border-radius: 2em;
+    color: #38b6ff;
+
+  }
+
+  .gnav-nav {
+    display: none;
+    position: fixed;
+    /*ナビのスタート位置と形状*/
+    top: -120%;
+    left: 0;
+    /*ナビの高さ*/
+    /*動き*/
+    transition: all 1s;
+    display: grid;
+    gap: 2em;
+    position: fixed;
+    width: 100%;
+    background-color: #38b6ff;
+    text-align: center;
+    padding: 50px 20px 60px;
+    border-radius: 0 0 0 5em;
+    color: #fff;
+    font-weight: normal;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gnav-nav.active {
+    top: 0;
+  }
+
+
+  .gnav-nav li img {
+    width: fit-content;
+    margin: 3em auto 0;
+  }
+
+  .gnav-nav.active li.gnav-list__img {
+    border-top: 1px solid white;
   }
 
   .engineer__wrap-items {
@@ -1520,26 +1592,27 @@ input[type="submit"] {
   }
 
 }
+
 /*スクロールダウン全体の場所*/
-.scrolldown2{
+.scrolldown2 {
   /*描画位置※位置は適宜調整してください*/
-position:absolute;
-bottom:10px;
-left:50%;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
 }
 
 /*Scrollテキストの描写*/
-.scrolldown2 span{
+.scrolldown2 span {
   /*描画位置*/
-position: absolute;
-left:10px;
-bottom:10px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
   /*テキストの形状*/
-color: #eee;
-font-size: 0.7rem;
-letter-spacing: 0.05em;
-/*縦書き設定*/
--ms-writing-mode: tb-rl;
+  color: #eee;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  /*縦書き設定*/
+  -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
 }
@@ -1549,42 +1622,58 @@ letter-spacing: 0.05em;
   content: "";
   /*描画位置*/
   position: absolute;
-  bottom:0;
-  left:-4px;
+  bottom: 0;
+  left: -4px;
   /*丸の形状*/
-width:10px;
-height:10px;
-border-radius: 50%;
-background:#eee;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #eee;
   /*丸の動き1.6秒かけて透過し、永遠にループ*/
-animation:
-  circlemove 1.6s ease-in-out infinite,
-  cirlemovehide 1.6s ease-out infinite;
+  animation:
+    circlemove 1.6s ease-in-out infinite,
+    cirlemovehide 1.6s ease-out infinite;
 }
 
 /*下からの距離が変化して丸の全体が上から下に動く*/
-@keyframes circlemove{
-    0%{bottom:45px;}
-   100%{bottom:-5px;}
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+
+  100% {
+    bottom: -5px;
+  }
 }
 
 /*上から下にかけて丸が透過→不透明→透過する*/
-@keyframes cirlemovehide{
-    0%{opacity:0}
-   50%{opacity:1;}
-  80%{opacity:0.9;}
-100%{opacity:0;}
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 /* 線の描写 */
-.scrolldown2:after{
-content:"";
+.scrolldown2:after {
+  content: "";
   /*描画位置*/
-position: absolute;
-bottom:0;
-left:0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   /*線の形状*/
-width:2px;
-height: 50px;
-background:#eee;
+  width: 2px;
+  height: 50px;
+  background: #eee;
 }

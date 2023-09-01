@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="image/faviconV2.jpeg" type="image/x-icon">
+  <!-- jquery用 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -15,19 +19,28 @@
     <h1 class="header-logo"><a href="#"><img src="image/logo.svg" alt="A-TECHロゴ"></a></h1>
     <div class="header__right">
       <nav>
-        <ul class="gnav-nav pc__only">
+        <ul class="gnav-nav">
           <li class="gnav-list"><a href="#">選ばれる理由</a></li>
           <li class="gnav-list"><a href="#">学習カリキュラム</a></li>
           <li class="gnav-list"><a href="#">カリキュラムサポート</a></li>
           <li class="gnav-list"><a href="#">料金</a></li>
+          <li class="gnav-list sp__only">
+            <a class="header__btn__contact back__color-blue" href="#">お問い合わせはこちら</a>
+          </li>
+          <li class="gnav-list sp__only gnav-list__img">
+            <img src="/image/logo02.svg" alt="">
+          </li>
         </ul>
       </nav>
       <div class="header__btn">
-        <a class="pc__only" href="#">お問い合わせはこちら</a>
+        <a class="pc__only header__btn__contact back__color-white" href="#">お問い合わせはこちら</a>
         <a class="hamburger sp__only" href="#">
           <span class="hamburger__bar"></span>
           <span class="hamburger__bar"></span>
         </a>
+      </div>
+      <div class="logo">
+        <img src="/image/logo02.svg" alt="">
       </div>
     </div>
   </header>
@@ -248,7 +261,8 @@
         <img class="triangle-item triangle-item06" src="image/triangle.svg" alt="回る三角形" width="70" height="auto">
       </div>
       <div class="support__wrap wrap">
-        <h3 class="section-ttl">豊富な <br class="sp__only"><span class="back__color back__color--sky section-ttl-bold">カリキュラムサポート</span>
+        <h3 class="section-ttl">豊富な <br class="sp__only"><span
+            class="back__color back__color--sky section-ttl-bold">カリキュラムサポート</span>
         </h3>
         <ul class="support__list">
           <li class="support__list-item">
@@ -421,7 +435,8 @@
     <section class="provide">
       <div class="provide__wrap wrap">
         <h3 class="section-ttl"><span class="back__color back__color--navy">一般社団法人MF様へ</span>
-          <br class="sp__only">授業を提供</h3>
+          <br class="sp__only">授業を提供
+        </h3>
         <div class="provide__wrap__desc">
           <div class="privide__wrap__desc-concept--left">
             <div class="company__concept">
@@ -504,9 +519,15 @@
       </div>
       <p class="copywrite">2022 &copy; A-TECH.</p>
     </div>
-
   </footer>
-
+  <script>
+    $(".header__btn").click(function () {
+      $(this).toggleClass('active');
+      $(".gnav-nav").toggleClass('active');
+      // $(".header__btn__contact").toggleClass('active');
+      // $(".logo").toggleClass('active');
+    });
+  </script>
 </body>
 
 </html>
