@@ -915,25 +915,34 @@ header {
 
 .FAQ__wrap-items-item {
   display: flex;
-  justify-content: space-between;
   padding: 10px 20px;
   border: 1px solid #e5e5e5;
   position: relative;
   font-size: 1rem;
+  cursor: pointer;
 }
 
-.arrow-bottom:before {
+.FAQ__wrap-items-item.is-show::after {
   content: "";
   margin: auto;
   position: absolute;
-  top: 18px;
-  right: 20px;
-  border-bottom: solid 2px #e5e5e5;
-  border-right: solid 2px #e5e5e5ed;
-  display: inline-block;
-  transform: rotate(45deg);
-  width: 10px;
-  height: 10px;
+  top: -10px;
+  bottom: 0;
+  left: 90%;
+  width: 13px;
+  height: 13px;
+  border-top: 4px solid #e5e5e5;
+  border-right: 4px solid #e5e5e5;
+  transform: rotate(135deg);
+}
+
+.accordion-area dd {
+  padding:.5em 2em;
+  display: none;
+}
+
+.is-show.open::after {
+  transform: rotate(-45deg);
 }
 
 /* ------------------ */
@@ -1283,7 +1292,9 @@ header {
   .flow__wrap-detail-item-left p {
     font-size: 1.125rem;
   }
-
+  .flow__wrap-detail-item-right{
+    display: block;
+  }
   .flow__wrap-detail-item-right strong {
     font-size: 0.875rem;
   }
@@ -1585,8 +1596,6 @@ header {
   }
 
   /* member */
-  .member__wrap-cards {}
-
   .memmber__wrap {
     padding: 10px;
   }
@@ -1680,7 +1689,7 @@ header {
     padding: 10px 15px;
   }
 
-  .flow__wrap-detail-item-left-toggle:after {
+  .flow__wrap-detail-item-left::after {
     content: "";
     margin: auto;
     position: absolute;
@@ -1694,6 +1703,10 @@ header {
     transform: rotate(135deg);
   }
 
+  .is-show .open::after {
+    transform: rotate(-45deg);
+  }
+
   .flow__wrap-detail-item-left p {
     font-size: 1.5rem;
     font-weight: 600;
@@ -1704,6 +1717,10 @@ header {
     height: 35px;
     object-fit: contain;
     margin: 0 15px 0 0;
+  }
+
+  .flow__wrap-detail-item-right{
+    display: none;
   }
 
   /* bangkok */

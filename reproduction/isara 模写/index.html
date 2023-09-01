@@ -4,10 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>isara</title>
   <link rel="stylesheet" href="css/reset.css">
   <script src="https://kit.fontawesome.com/dee3a8d68b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="/image/faviconV2.png">
+  <!-- jquery用 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -24,7 +29,7 @@
       </div>
       <div class="btn__contact small-sp">
         <div class="btn__contact small-sp inner">
-          <img src="image/form.png" alt="資料画像" width="29" height="36" >
+          <img src="image/form.png" alt="資料画像" width="29" height="36">
           <p>資料請求</p>
         </div><!-- /.btn__contact -->
       </div><!-- /.btn__contact -->
@@ -409,7 +414,7 @@
         <ul class="flow__wrap-detail-items">
           <li>
             <div class="flow__wrap-detail-item">
-              <div class="flow__wrap-detail-item-left">
+              <div class="flow__wrap-detail-item-left is-show">
                 <img src="image/skypeconsulting.png" alt="" width="98" height="91">
                 <p>Skypeで<span class="pc__only">事前コンサル</span></p>
                 <p class="sp__only">事前コンサル</p>
@@ -430,7 +435,7 @@
           </li>
           <li>
             <div class="flow__wrap-detail-item">
-              <div class="flow__wrap-detail-item-left">
+              <div class="flow__wrap-detail-item-left is-show">
                 <img src="image/preworks.png" alt="" width="113" height="90">
                 <p>事前課題の提出</p>
                 <div class="flow__wrap-detail-item-left-toggle"></div><!-- / -->
@@ -452,7 +457,7 @@
           </li>
           <li>
             <div class="flow__wrap-detail-item">
-              <div class="flow__wrap-detail-item-left">
+              <div class="flow__wrap-detail-item-left is-show">
                 <img src="image/flight.png" alt="" width="106" height="95">
                 <p>現地に渡航</p>
                 <div class="flow__wrap-detail-item-left-toggle"></div><!-- / -->
@@ -470,7 +475,7 @@
           </li>
           <li>
             <div class="flow__wrap-detail-item">
-              <div class="flow__wrap-detail-item-left">
+              <div class="flow__wrap-detail-item-left is-show">
                 <img src="image/personwithlight.png" alt="" width="93" height="111">
                 <p>実案件を<span class="pc__only">通して学ぶ</span></p>
                 <p class="sp__only">通して学ぶ</p>
@@ -490,7 +495,7 @@
           </li>
           <li>
             <div class="flow__wrap-detail-item">
-              <div class="flow__wrap-detail-item-left">
+              <div class="flow__wrap-detail-item-left is-show">
                 <img src="image/jobsupport.png" alt="" width="98" height="90">
                 <p>帰国後の仕事獲得<span class="pc__only">サポート付き</span></p>
                 <p class="sp__only">サポート付き</p>
@@ -588,9 +593,11 @@
   <section>
     <div class="specialdetail__wrap">
       <h3 class="section-title-none"><span>iSaraは</span><span>ボランティアではありません</span></h3><!-- /.section-title -->
-      <p>ここまでみると、実質０円で各種サポートもある、<br class="sp__only">特典が多すぎて逆に怪しい。<br class="pc__only">そう思われるかもしれません。<br>しかし、iSaraが目指すことは異なります。</p>
+      <p>ここまでみると、実質０円で各種サポートもある、<br class="sp__only">特典が多すぎて逆に怪しい。<br
+          class="pc__only">そう思われるかもしれません。<br>しかし、iSaraが目指すことは異なります。</p>
       <p class="section-title-white"><span>月１０万円稼げる</span><span>エンジニアを輩出し続ける。</span></p>
-      <p>最大の価値がこれです。<br>iSaraの卒業生が稼ぎ続けることで、<br class="sp__only">小さな経済が動き始めます。<br>ここに最大の価値があり、<br class="sp__only">この講座はその序章にすぎません。
+      <p>最大の価値がこれです。<br>iSaraの卒業生が稼ぎ続けることで、<br class="sp__only">小さな経済が動き始めます。<br>ここに最大の価値があり、<br
+          class="sp__only">この講座はその序章にすぎません。
       </p>
     </div><!-- /specialdetail__wrap -->
   </section><!-- /.section -->
@@ -639,81 +646,98 @@
       <h3 class="FAQ-title-none"><i class="fa fa-envelope-open-o" aria-hidden="true"></i>よくある質問</h3>
       <!-- /.FAQ-title -->
       <div class="FAQ__wrap-items">
-        <ul>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>プログラミングスキルは必要ですか？</a>
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a class="arrow-bottom" href="">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>参加費以上に稼げなかったらどうなりますか？
-            </a>
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>滞在中の宿泊先はどうなりますか？
-            </a>
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>滞在中の食事はどうなりますか？</a>
+        <dl class="accordion-area">
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>プログラミングスキルは必要ですか？
+          </dt>
+          <dd>
+            いいえ、必要ありません。しかし、iSaraでは参加費以上の金額が稼げることを保障しています。 従って、事前通話面談時点で簡単なテストを実施し、場合によってはお断りをしております。この点だけはご了承ください。
+          </dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+            参加費以上に稼げなかったらどうなりますか？
+          </dt>
+          <dd>
+            参加費である258,000円以上の金額をトータルで稼ぐまで、無期限でサポート延長いたします。（講座参加後、週30時間以上の実践をすることと、週１回の実践報告をすることが延長条件です。）きちんと学び実践すれば、フリーランスでも収入を作ることは十分に可能です。
+          </dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>滞在中の宿泊先はどうなりますか？
+          </dt>
+          <dd>
+            宿泊費用が必要ですが、iSara提携のホステルに宿泊することになりますので心配はありません。
+          </dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>滞在中の食事はどうなりますか？
+          </dt>
+          <dd>拠点となる新築シェアハウスの周辺に、50バーツ程度の（160円）安価な飲食店が多数あります。 日本食レストランもありますし、出前を取ることも可能です。
+          </dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>追加でかかる費用はありますか？
+          </dt>
+          <dd>
 
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>追加でかかる費用はありますか？</a>
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>就職、転職はできますか？
-            </a>
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>フリーランスにならなければならないのですか？
-            </a>
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>ノマドワーカー的に世界を旅しながら働きたいです。可能ですか？
-            </a>
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>学ぶプログラミング言語はなんですか？
-            </a>
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>将来的にWebサービス、アプリ、メディアを作りたいです。</a>
+            宿泊費（トータル20000円）と食費（一食150円程度）くらいです。
 
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>次回の開催の予定はありますか？
-            </a>
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>海外に出るのが初めてで不安です。
-            </a>
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>タイ語、英語が一切話せません。参加可能でしょうか。
-            </a>
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>治安はどうですか？
-            </a>
-          </li>
-          <li class="FAQ__wrap-items-item">
-            <a href="#" class="arrow-bottom">
-              <i class="fa fa-question-circle-o" aria-hidden="true"></i>パソコンは必要ですか？
-            </a>
-          </li>
-        </ul>
+          </dd>
+
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>就職、転職はできますか？
+          </dt>
+          <dd>
+            DODAの調査によると、2017年のエンジニアの求人倍率は7.5倍です。これは、人材不足が叫ばれる医療業界（医師：6倍、看護師：3倍）よりも高い数値です。ですのできちんとしたスキルを身につけることができれば、就職・転職には困らないはずです。元リクルートの転職のプロも運営スタッフとして参加しています。
+
+          </dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>フリーランスにならなければならないのですか？
+          </dt>
+          <dd>いいえ、必ずフリーランスにならないといけないわけではありません。 実際に過去の卒業生の方の進路も、独立、副業として続ける、就職するなど様々です。
+          </dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>ノマドワーカー的に世界を旅しながら働きたいです。可能ですか？
+          </dt>
+          <dd>
+            きちんと努力し、スキルを身に着けることができれば可能です。 iSaraは、「好きなときに働き、好きなときに遊ぶ」という人生を送れる人を増やすために開講しました。
+            ちなみに、講師は全員ノマドワーカーとして、働きながら自由に世界中を旅しています。
+
+          </dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>学ぶプログラミング言語はなんですか？
+          </dt>
+          <dd>HTML / CSS / PHPを学びます。どの言語も需要が高いです。</dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>将来的にWebサービス、アプリ、メディアを作りたいです。
+          </dt>
+          <dd>
+            経験してる講師がいますよ。大丈夫です。
+          </dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>次回の開催の予定はありますか？
+          </dt>
+          <dd>未定です。まずはお問合せください。</dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>海外に出るのが初めてで不安です。
+          </dt>
+          <dd>
+            講師陣が現地での生活をサポートしますので安心してください。ただしパスポート取得は必要です。
+          </dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>タイ語、英語が一切話せません。参加可能でしょうか。
+          </dt>
+          <dd>
+            タイ語スタッフ、英語スタッフがいるのでOKです。日本人、タイ人スタッフがおりますので、期間中のトラブル対応の心配は必要ありません。
+        </dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>治安はどうですか？
+</dt>
+<dd>
+  バンコクは、東南アジアや南アジアの他の国の都市部と比べると、街中も整備されており、非常に治安の良い街です。日本ほどではないですが、世界でも非常に治安の良い国として知られています。
+</dd>
+          <dt class="FAQ__wrap-items-item is-show">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>パソコンは必要ですか？
+          </dt>
+          <dd>はい。ノートPCのご用意が必要です。
+          </dd>
+        </dl>
       </div><!-- /.FAQ__wrap-items -->
     </div><!-- /.FAQ__wrap -->
   </section><!-- /.section -->
@@ -744,6 +768,14 @@
           rel="nofollow">Kentaro Koga</a></p>
     </div><!-- /.footer__wrap -->
   </footer><!-- /.footer -->
+
+  <script>
+    $('.is-show').click(function () {
+      $(this).next().slideToggle();
+      $(this).toggleClass("open");
+    });
+  </script>
+
 </body>
 
 </html>
