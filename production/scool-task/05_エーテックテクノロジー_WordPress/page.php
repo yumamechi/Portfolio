@@ -1,0 +1,10 @@
+<!-- ヘッター -->
+<?php get_header(); ?>
+<!-- お問い合わせページ -->
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post(); ?>
+    <?php the_content(); ?>
+  <?php endwhile; ?>
+<?php endif; ?>
+<!-- フッター -->
+<?php get_footer(); ?>
