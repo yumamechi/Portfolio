@@ -1,0 +1,45 @@
+@use 'forward' as fw;
+
+
+/*共通部分*/
+html {
+  font-family: "Noto Sans JP", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: fw.rem(16);
+  font-weight: 500;
+  line-height: 1;
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
+
+body {
+  color: #333;
+
+  &.active {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.pc__only {
+  display: block;
+
+  @include fw.tb {
+    display: none;
+  }
+
+  @include fw.sp {
+    display: none;
+  }
+}
+
+.sp__only {
+  display: none;
+
+  @include fw.sp {
+    display: block;
+  }
+}

@@ -1,0 +1,15 @@
+.foo {
+  background: -webkit-gradient(linear, left top, left bottom, from(#cc2), to(#44d));
+  background: linear-gradient(top, #cc2, #44d);
+  color: #fff;
+}
+
+.bar {
+  background: -webkit-gradient(linear, left top, left bottom, from(#cccc22), to(#4444dd));
+  background: linear-gradient(top, #cccc22, #4444dd);
+  color: #ffffff;
+}
+
+.baz {
+  border-color: #123456;
+}

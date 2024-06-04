@@ -1,0 +1,134 @@
+@use "variables" as v;
+@use "media" as m;
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin textShadow($color: #000, $alpha: .5) {
+  text-shadow: 1px 1px 2px rgba($color, $alpha);
+}
+
+// @mixin flexSpacebetween {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+// @mixin flexCenter {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+@mixin flex($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@mixin backgroundimage {
+  background-image: url(/img/pc_bg_mv.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin sectionTitle {
+  color: v.color(accent);
+  font-size: v.rem(40);
+  font-weight: bold;
+
+  @include m.sp {
+    font-size: v.rem(32);
+  }
+}
+
+@mixin hamburger {
+  .hamburger {
+    padding: 22px 16px;
+    color: v.color(white);
+    border-bottom-left-radius: 0;
+    display: grid;
+    align-content: center;
+    gap: 8px;
+    width: 60px;
+    height: 60px;
+    background: v.color(accent);
+
+    &.active span {
+
+      &:nth-of-type(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
+
+      &:nth-of-type(2) {
+        display: none;
+      }
+
+      &:nth-of-type(3) {
+        transform: translateY(-5px) rotate(135deg);
+      }
+    }
+
+    .hamburger__bar {
+      height: 2px;
+      background: v.color(white);
+      border-radius: 5px;
+      transition: all .4s;
+      z-index: 4;
+    }
+  }
+}
+
+@mixin gnav__nav {
+  & {
+    // display: none;
+    position: fixed;
+    /*ナビのスタート位置と形状*/
+    right: -100%;
+    top: 0;
+    /*ナビの高さ*/
+    /*動き*/
+    transition: all 1s;
+    display: flex;
+    flex-direction: column;
+    width: (200 / 375) * 100%;
+    height: 100vh;
+    background: v.color(accent) ;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 90px 67px 0 50px;
+    color: v.color(white);
+    font-weight: normal;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 2;
+
+    &.active {
+      top: 0;
+      right: 0;
+      transition: all 1s;
+
+      & .gnav__nav__item {
+        border-left: 0px;
+        padding: 10px 0;
+
+        &:hover {
+          color: v.color(white);
+          opacity: .6;
+        }
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+}

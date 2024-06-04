@@ -1,0 +1,269 @@
+@use "forward" as fw;
+@use "sass:math";
+
+header {
+  .inner {
+    @include fw.flex(space-between);
+    padding: 28px 70px;
+
+    @include fw.tb {
+      height: 60px;
+      padding: 0;
+    }
+
+    @include fw.sp {
+      height: 60px;
+      padding: 0;
+    }
+
+    .logo {
+      @include fw.tb {
+        padding: 20px;
+      }
+    }
+
+    & nav {
+      & ul.gnav__nav {
+        @include fw.flex(center);
+        gap: 30px;
+
+        @include fw.tb {
+          display: none;
+          @include fw.gnav__nav;
+
+        }
+
+        // @include fw.sp {
+        //   & {
+
+        //   }
+        // }
+      }
+
+      & li {
+        font-size: fw.rem(16);
+        font-weight: bold;
+
+        & a {
+          &:hover {
+            color: fw.color(accent);
+          }
+        }
+      }
+
+      @include fw.tb {
+        @include fw.hamburger;
+      }
+    }
+
+
+  }
+}
+
+
+
+/* top */
+
+.top {
+  hgroup {
+    padding: 200px 0;
+    height: 600px;
+    text-align: center;
+    color: fw.color(white);
+    @include fw.backgroundimage;
+
+    @include fw.tb {
+      background-position: top 0 right -220px;
+    }
+
+    @include fw.sp {
+      height: 460px;
+    }
+
+    h2 {
+      font-size: fw.rem(160);
+      font-weight: bold;
+      line-height: 1;
+
+      @include fw.sp {
+        font-size: fw.rem(80);
+      }
+    }
+
+    p {
+      font-size: fw.rem(24);
+
+      @include fw.sp {
+        font-size: fw.rem(20);
+      }
+    }
+  }
+}
+
+%section {
+  padding: 60px floor((math.div(165, 1440)) * 100%) 35px;
+}
+
+/* news */
+
+.news {
+  margin: 0 auto;
+  // padding: 60px floor((165 / 1440) * 100%);
+  @extend %section;
+
+  @include fw.tb {
+    padding: 20px floor((math.div(20 , 375)) * 100%) 17px;
+  }
+
+  .section__inner {
+    @include fw.flex(space-between);
+    gap: 90px;
+    max-width: 1110px;
+
+    @include fw.tb {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .section__title {
+      @include fw.sectionTitle;
+    }
+
+    .news__content {
+      max-width: 855px;
+      font-size: fw.rem(15);
+
+      li {
+        @include fw.flex(flex-start);
+        gap: 20px;
+        padding: 15px 0;
+        border-bottom: 1px solid #E8E8E8;
+        font-family: fw.$roboto;
+
+        @include fw.tb {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0;
+        }
+
+      }
+    }
+  }
+}
+
+/* service*/
+.service {
+  @extend %section;
+  position: relative;
+
+  @include fw.tb {
+    padding: 20px floor((math.div(20 , 375)) * 100%) 17px;
+  }
+
+  p.bg-text {
+    font-family: fw.$roboto;
+    font-size: 168px;
+    color: #F2F2F2;
+    position: absolute;
+    top: -20px;
+    right: floor((math.div(165, 1440)) * 100%);
+    z-index: -1;
+    font-weight: bold;
+
+    @include fw.sp {
+      font-size: fw.rem(70);
+      top: 10px;
+      right: 0;
+    }
+  }
+
+  .section__title {
+    @include fw.sectionTitle;
+    margin: 0 0 50px;
+
+    @include fw.sp {
+      margin: 0 0 21px;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+
+    @include fw.tb {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include fw.sp {
+      @include fw.flex(center);
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    li {
+      // flex: 1;
+      text-align: center;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      padding: 50px;
+      min-height: 266px;
+      min-width:floor((math.div(350 , 1440)) * 100%) ;
+      background: fw.color(white);
+      border-radius: 8px;
+
+      @include fw.tb {
+        width: 33.3%;
+        padding: 40px 30px;
+        min-height: 246px;
+        min-width: 270px;
+        flex-wrap: wrap;
+        box-shadow: 0 3px 21px rgba(0, 0, 0, 0.16);
+      }
+
+      h4 {
+        font-size: fw.rem(18);
+        font-weight: bold;
+        margin: 5px 0 20px;
+      }
+
+      p {
+        font-size: fw.rem(14);
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+footer {
+  background: fw.color(accent);
+  color: fw.color(white);
+  height: 159px;
+  padding: 60px floor((math.div(165, 1440)) * 100%) 50px;
+
+  & nav {
+    ul.gnav__nav {
+      @include fw.flex(flex-start);
+      gap: 30px;
+      margin: 0 0 6px;
+
+      li {
+        font-size: fw.rem(14);
+        font-weight: bold;
+
+        a {
+          &:hover {
+            color: fw.color(accent);
+          }
+        }
+      }
+    }
+  }
+
+  p {
+    font-size: fw.rem(12);
+  }
+}

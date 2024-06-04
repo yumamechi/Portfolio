@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>START</title>
+  <link rel="icon" href="/img/favicon.ico" />
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="inner">
+      <h1 class="logo"><img src="/img/logo.png" alt="STARTロゴ" width="169" height="29"></h1>
+      <nav>
+        <ul class="gnav__nav">
+          <li><a class="gnav__nav__item" href="#home">ホーム</a></li>
+          <li><a class="gnav__nav__item" href="/message.html">メッセージ</a></li>
+          <li><a class="gnav__nav__item" href="#about">会社概要</a></li>
+        </ul>
+        <a class="hamburger sp__only" href="#">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="top">
+      <hgroup>
+        <h2 class="main_copy">START</h2>
+        <p>仕事に最高のスタートを。</p>
+      </hgroup>
+    </section>
+    <section class="news">
+      <div class="section__inner">
+        <h3 class="section__title">ニュース</h3>
+        <ul class="news__content">
+          <li>
+            <time datetime="2030-02-10" class="date">2030.02.10</time>
+            <p class="news-title">コーポレートサイトをリニューアルしました。</p>
+          </li>
+          <li>
+            <time datetime="2030-02-08" class="date">2030.02.08</time>
+            <p class="news-title">採用を強化中です！一緒に働きませんか？</p>
+          </li>
+          <li>
+            <time datetime="2030-02-02" class="date">2030.02.02</time>
+            <p class="news-title">人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="service">
+      <p class="bg-text">SERVICE</p>
+      <h3 class="section__title">サービス</h3>
+      <ul>
+        <li>
+          <img src="/img/work_bag_icon.png" alt="">
+          <h4 class="content__title">人材紹介業</h4>
+          <p>新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です</p>
+        </li>
+        <li>
+          <img src="/img/city_icon.png" alt="">
+          <h4 class="content__title">スクール事業</h4>
+          <p>オンラインでWeb制作を学べるスクールを運営しています。</p>
+        </li>
+        <li>
+          <img src="/img/pc_icon.png" alt="">
+          <h4 class="content__title">Webメディア運営</h4>
+          <p>人事系メディアやWebデザイン関連のメディアなどを複数運営しています</p>
+        </li>
+      </ul>
+    </section>
+
+
+  </main>
+  <footer>
+    <nav>
+      <ul class="gnav__nav">
+        <li><a class="gnav__nav__item" href="#home">ホーム</a></li>
+        <li><a class="gnav__nav__item" href="message">メッセージ</a></li>
+        <li><a class="gnav__nav__item" href="#about">会社概要</a></li>
+      </ul>
+      <a class="hamburger sp__only" href="#">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar__menu"></span>
+      </a>
+      <p>&copy;START</p>
+    </nav>
+  </footer>
+  <script>
+    //ヘッダーメニュー
+    $(".hamburger").click(function () {
+      $(this).toggleClass('active');
+      $(".gnav__nav").toggleClass('active');
+      $("body").toggleClass("active");//ハンバーガーメニュー展開時背景をスクロールさせない
+    });
+  </script>
+</body>
+
+</html>

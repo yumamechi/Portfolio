@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>START</title>
+  <link rel="icon" href="/img/favicon.ico" />
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="inner">
+      <h1 class="logo"><img src="/img/logo.png" alt="STARTロゴ" width="169" height="29"></h1>
+      <nav>
+        <ul class="gnav__nav">
+          <li><a class="gnav__nav__item" href="#home">ホーム</a></li>
+          <li><a class="gnav__nav__item" href="/message.html">メッセージ</a></li>
+          <li><a class="gnav__nav__item" href="#about">会社概要</a></li>
+        </ul>
+        <a class="hamburger sp__only" href="#">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="message">
+      <div class="page__top-title">
+        <h2 class="main_copy">メッセージ</h2>
+      </div>
+      <div class="content">
+        <div class="content__top__text">
+          <h3>「仕事」をきっかけに<br>
+            人生の新しいスタートを！</h3>
+          <p>大事なお仕事探しを応援させてください</p>
+        </div>
+        <div class="message-text">
+          <img src="/img/message_ceo.png" alt="">
+          <p>はじめまして。代表取締役社長のショーン・デイビット・ジュニアです。<br>
+            私はそこそこ幸せです。それは仕事が楽しいからです。もちろん仕事イコール人生ではありません。でも仕事は人生の大事な基盤のように思っています。<br>
+            株式会社STARTは、みなさんが仕事をきっかけに理想の人生を実現する手助けをしています。幸せにつながるお仕事紹介サービス<span>『スタート』</span>や、共通の目標を目指す仲間が見つかる人材紹介SNS<span>『ゴール』</span>を運営しています。また、Webデザインの基礎スキルを身につけられるスクール<span>『Webの学校』</span>も随時開講しています。
+          </p>
+        </div>
+        <img class="office-img" src="/img/message_office.png" alt="">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <nav>
+      <ul class="gnav__nav">
+        <li><a class="gnav__nav__item" href="#home">ホーム</a></li>
+        <li><a class="gnav__nav__item" href="message">メッセージ</a></li>
+        <li><a class="gnav__nav__item" href="#about">会社概要</a></li>
+      </ul>
+      <a class="hamburger sp__only" href="#">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar__menu"></span>
+      </a>
+      <p>&copy;START</p>
+    </nav>
+  </footer>
+  <script>
+    //ヘッダーメニュー
+    $(".hamburger").click(function () {
+      $(this).toggleClass('active');
+      $(".gnav__nav").toggleClass('active');
+      $("body").toggleClass("active");//ハンバーガーメニュー展開時背景をスクロールさせない
+    });
+  </script>
+</body>
+
+</html>

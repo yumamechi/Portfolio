@@ -1,0 +1,61 @@
+@use "forward" as fw;
+@use "sass:math";
+
+.message {
+  .page__top-title {
+    @include fw.backgroundimage;
+    height: 190px;
+
+    .main_copy {
+      font-size: fw.rem(40);
+      color: fw.color(white);
+      text-align: center;
+      padding: 75px 0;
+      line-height: 1;
+    }
+  }
+
+  .content {
+    max-width: 1110px;
+    margin: 0 floor((math.div(165, 1440)) * 100%);
+
+    .content__top__text {
+      text-align: center;
+
+      h3 {
+        color: fw.color(accent);
+        font-size: fw.rem(40);
+        font-weight: bold;
+        line-height: (60 / 40);
+        padding: 60px 0 20px;
+      }
+      p{
+        font-size: fw.rem(18);
+      }
+    }
+
+    .message-text {
+      padding: 40px 0 80px;
+      max-width: 790px;
+      margin: 0 auto;
+      line-height: (25.6 / 16);
+      letter-spacing: .05em;
+
+      img {
+        width: 100px;
+        float: left;
+        padding: 0 25px 25px 0;
+      }
+
+      p {
+        span {
+          color: fw.color(blue);
+        }
+      }
+    }
+
+    .office-img{
+      margin: 0 0 100px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+$GNaviHeight: 60px;
+$GNaviButtonWidth: 150px;
+$ContentWidth: 1024px;
+$SideAreaWidth: 300px;
+$AreaPadding: 20px;
+
+$width: (
+  contents:1024px,
+  sideArea:300px
+);
+
+$path: (
+  img:"/img/"
+);
+
+$colors: (
+  white: #fff,
+  accent: #DD1B57,
+  blue: #349BF4
+);
+
+@function color($name) {
+  @return map-get($colors, $name);
+}
+
+$roboto: "Roboto";
+
+$baseFontSize: 16;
+  @function rem($pixels) {
+    @return $pixels / $baseFontSize * 1rem;
+  }
